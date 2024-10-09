@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Entities.ValueObjects
 {
-    internal class UserAction (string user, string description)
+    public class UserAction (string user, string description)
     {
 
         public DateTime CreatedDateTime { get;} = DateTime.Now;
