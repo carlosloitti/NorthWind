@@ -8,8 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
 
 HostApplicationBuilder Builder = Host.CreateApplicationBuilder();
-Builder.Services.AddConsoleWriter();
-Builder.Services.AddFileWriter();
+
+Builder.Services.AddNorthWindServices();
+
+
 Builder.Services.AddSingleton<AppLogger>();   
 Builder.Services.AddSingleton<ProductService>();
 using IHost AppHost = Builder.Build();
